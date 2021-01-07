@@ -22,4 +22,6 @@ public class User {
 
 	private String item;
 
+	private String token;
+
 }

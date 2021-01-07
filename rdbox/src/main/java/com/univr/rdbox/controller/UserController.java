@@ -56,10 +56,10 @@ public class UserController {
 	}
 	//가입
 	@PostMapping(value = "/join")
-	public ResponseEntity<?> join(@RequestParam String id,@RequestParam String nickname) {
+	public ResponseEntity<?> join(@RequestParam String id,@RequestParam String nickname,@RequestParam String token) {
 		System.out.println("join Controller");
 		try {
-			userService.join(id, nickname);
+			userService.join(id, nickname,token);
 			return new ResponseEntity<>(null, HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);

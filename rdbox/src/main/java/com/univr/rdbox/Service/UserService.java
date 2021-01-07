@@ -33,12 +33,13 @@ public class UserService {
     };
     //
 
-    public void join(String id, String nickname) {
+    public void join(String id, String nickname,String token) {
         User user = new User();
         user.setKakaoid(id);
         user.setNickname(nickname);
         user.setItem("x");
         user.setIsdraw(0);
+        user.setToken(token);
         System.out.println(user);
         userDao.save(user);
     };
