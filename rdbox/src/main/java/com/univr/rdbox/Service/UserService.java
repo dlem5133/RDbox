@@ -22,7 +22,7 @@ public class UserService {
     public int login(String id) {
         try {
             User user = userDao.findByKakaoid(id);
-            if (user.getItem() != "x") {
+            if (user.getItem().equals("x")) {
                 return 1;
             }
             return 2;
