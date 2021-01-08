@@ -93,7 +93,7 @@ function RDBox({ match }) {
             }else if(gift === "핫팩(10개)"){
                 number = 9;
             }else{
-                alert("경품이 전부 소진 되었습니다");
+                alert("경품이 전부 소진 되었습니다.");
                 history.push(`/`);
             }
             Setbg(bgimg[number]);
