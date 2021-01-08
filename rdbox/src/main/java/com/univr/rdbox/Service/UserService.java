@@ -25,6 +25,8 @@ public class UserService {
             if (user.getItem().equals("x")) {
                 return 1;
             }
+            if(user==null)
+                return 0;
             return 2;
         } catch (Exception e) {
             return 0;
