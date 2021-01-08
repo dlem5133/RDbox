@@ -27,7 +27,6 @@ function NicName({match}){
                 method: 'POST',
                 url: constants.HostUrl + `/user/join?id=${id}&nickname=${nickname}&token=univr`,
             }).then((response) => {
-                console.log(response.data);
                 history.push(`/randombox/${id}`);
             }).catch((error)=>{
                 console.log(error);
@@ -40,7 +39,6 @@ function NicName({match}){
             method: "POST",
             url: constants.HostUrl+`/user/login?id=${id}`,
         }).then((response)=>{
-            console.log(response.data);
             if(response.data === 1){
                 history.push(`/randombox/${id}`);
             }else if(response.data === 2){
