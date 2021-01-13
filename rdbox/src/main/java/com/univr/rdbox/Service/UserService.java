@@ -27,7 +27,7 @@ public class UserService {
             }
             if(user==null)
                 return 0;
-            return 0;
+            return 2;
         } catch (Exception e) {
             return 0;
         }
