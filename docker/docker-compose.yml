@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  db:
+    image: mariadb
+    ports:
+      - 30000:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "j4s2opaj77yqh3tiakap"
+      MYSQL_DATABASE : "rdbox"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - ./init/:/docker-entrypoint-initdb.d/
+      - ./mysql/:/var/lib/mysql
+
+  front:
+    image: jusk2/rdbox-web
+    ports: 
+      - 5000:5000
+    restart: always
+  
+  backend:
+    image: jusk2/rdbox-api
+    ports: 
+      - 8080:8080
+    restart: always
+    depends_on: 
+      - db

@@ -1,3 +1,3 @@
 export default {
-    HostUrl: 'http://localhost:8080',
+    HostUrl: 'https://rdbox.hawaiian-pizza.pw',
   };
